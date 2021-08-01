@@ -8,6 +8,7 @@ export class UserDto {
   readonly password: string;
   readonly bio: string;
   readonly image: string;
+  readonly token: string;
 }
 
 export class CreateUserDto {
