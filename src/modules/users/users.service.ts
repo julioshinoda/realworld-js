@@ -25,19 +25,10 @@ export class UsersService {
 
   async getUser(token: string): Promise<any> {
     const payload = await this.jwtService.verifyAsync(token);
-    const response = await this.userRepository.findOne<User>({
+    return await this.userRepository.findOne<User>({
       where: { id: payload.id },
       attributes: { exclude: ['id', 'password', 'createdAt', 'updatedAt'] },
     });
-    return {
-      user: {
-        email: response.email,
-        token,
-        username: response.username,
-        bio: response.bio,
-        image: response.image,
-      },
-    };
   }
 
   async update(data, id) {

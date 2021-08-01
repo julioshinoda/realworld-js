@@ -10,8 +10,16 @@ export class UsersController {
   @UseGuards(AuthGuard('jwt'))
   @Get('')
   async getUser(@Headers() headers) {
-    return await this.userService.getUser(
-      headers.authorization.replace('Bearer ', ''),
-    );
+    const token = headers.authorization.replace('Bearer ', '');
+    const response = await this.userService.getUser(token);
+    return {
+      user: {
+        email: response.email,
+        token,
+        username: response.username,
+        bio: response.bio,
+        image: response.image,
+      },
+    };
   }
 }
