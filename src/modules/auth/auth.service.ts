@@ -43,6 +43,14 @@ export class AuthService {
     return { user: result, token };
   }
 
+  public async update(token: string, user) {
+    const payload = await this.jwtService.verifyAsync(token);
+    if (user.password) {
+      user.password = await this.hashPassword(user.password);
+    }
+    const response = await this.userService.update(user, payload.id);
+  }
+
   private async generateToken(user) {
     const token = await this.jwtService.signAsync(user);
     return token;

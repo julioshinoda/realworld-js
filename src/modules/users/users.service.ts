@@ -20,4 +20,14 @@ export class UsersService {
   async findOneById(id: number): Promise<User> {
     return await this.userRepository.findOne<User>({ where: { id } });
   }
+
+  async update(data, id) {
+    const [numberOfAffectedRows, [updatedUser]] =
+      await this.userRepository.update(
+        { ...data },
+        { where: { id }, returning: true },
+      );
+
+    return { numberOfAffectedRows, updatedUser };
+  }
 }

@@ -1,6 +1,14 @@
-import { Controller, Post, UseGuards, Request, Body } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  UseGuards,
+  Request,
+  Body,
+  Put,
+  Headers,
+} from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { CreateUserDto } from '../users/dto/user.dto';
+import { CreateUserDto, UpdateUserDto } from '../users/dto/user.dto';
 import { AuthService } from './auth.service';
 
 @Controller('users')
@@ -16,5 +24,14 @@ export class AuthController {
   @Post('')
   async signUp(@Body() user: CreateUserDto) {
     return await this.authService.create(user.user);
+  }
+
+  @UseGuards(AuthGuard('jwt'))
+  @Put('')
+  async update(@Body() user: UpdateUserDto, @Headers() headers) {
+    return await this.authService.update(
+      headers.authorization.replace('Bearer ', ''),
+      user.user,
+    );
   }
 }
