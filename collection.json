@@ -1,0 +1,299 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-08-02T01:44:33.132Z",
+    "__export_source": "insomnia.desktop.app:v2021.3.0",
+    "resources": [
+        {
+            "_id": "req_7deb1b1fcecc47c6ac6808065fbfd0fb",
+            "parentId": "fld_6dff76c02e9444a2ba4af85ec6fe6c4d",
+            "modified": 1627867751174,
+            "created": 1627798126004,
+            "url": "http://localhost:3000/api/profiles/cap3/follow",
+            "name": "Unfollow user",
+            "description": "",
+            "method": "DELETE",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJjYXAiLCJlbWFpbCI6ImNhcHliYXJhQG1haWwuY29tIiwiYmlvIjpudWxsLCJpbWFnZSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wMlQwMTowMzoxMi41MzRaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wMlQwMTowMzoxMi41MzRaIiwiaWF0IjoxNjI3ODY3NjkxLCJleHAiOjE2MjgwNDA0OTF9.oW_Gax7jldRmsKH5TT49HReigX8ugdLWqN0D73VGxLw"
+            },
+            "metaSortKey": -1627798126050,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_6dff76c02e9444a2ba4af85ec6fe6c4d",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627792446911,
+            "created": 1627792446911,
+            "name": "Profiles",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627792446911,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_f959968c549043aca7377aafda4b55a6",
+            "parentId": null,
+            "modified": 1627527783173,
+            "created": 1627527783173,
+            "name": "rw api",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_2253ab225f8545599d40c246223fc546",
+            "parentId": "fld_6dff76c02e9444a2ba4af85ec6fe6c4d",
+            "modified": 1627867728119,
+            "created": 1627792467261,
+            "url": "http://localhost:3000/api/profiles/cap3/follow",
+            "name": "Follow user",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_bf79323ea55c4be7a64a08df041d7262"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJjYXAiLCJlbWFpbCI6ImNhcHliYXJhQG1haWwuY29tIiwiYmlvIjpudWxsLCJpbWFnZSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMS0wOC0wMlQwMTowMzoxMi41MzRaIiwidXBkYXRlZEF0IjoiMjAyMS0wOC0wMlQwMTowMzoxMi41MzRaIiwiaWF0IjoxNjI3ODY3NjkxLCJleHAiOjE2MjgwNDA0OTF9.oW_Gax7jldRmsKH5TT49HReigX8ugdLWqN0D73VGxLw"
+            },
+            "metaSortKey": -1627792467261,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d7fcf114e69d482e9aab3724114645e2",
+            "parentId": "fld_6dff76c02e9444a2ba4af85ec6fe6c4d",
+            "modified": 1627797690414,
+            "created": 1627788538253,
+            "url": "http://localhost:3000/api/profiles/cap2",
+            "name": "Get Profile",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjYWFhcDMiLCJlbWFpbCI6ImNhcHliYXJhQG1haWwuY29tIiwiYmlvIjoiY2FweWJhcmEzQG1haWwuY29tIiwiaW1hZ2UiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjEtMDctMjlUMDM6MDU6MzUuMjU5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDctMzFUMDM6MDc6MjQuMTAyWiIsImlhdCI6MTYyNzc4MTQwNiwiZXhwIjoxNjI3OTU0MjA2fQ._alJfAQHprALwzq5XdYyu9XiMNTD12tWe-FgDVRr9vI",
+                "disabled": true
+            },
+            "metaSortKey": -1627788538253,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d7e6c2257f124aacba1d4f80944084da",
+            "parentId": "fld_98ad9b7c5fa14a9b82b3875cee688ced",
+            "modified": 1627781417904,
+            "created": 1627781391654,
+            "url": "http://localhost:3000/api/users",
+            "name": "Get Current User",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjYWFhcDMiLCJlbWFpbCI6ImNhcHliYXJhQG1haWwuY29tIiwiYmlvIjoiY2FweWJhcmEzQG1haWwuY29tIiwiaW1hZ2UiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjEtMDctMjlUMDM6MDU6MzUuMjU5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDctMzFUMDM6MDc6MjQuMTAyWiIsImlhdCI6MTYyNzc4MTQwNiwiZXhwIjoxNjI3OTU0MjA2fQ._alJfAQHprALwzq5XdYyu9XiMNTD12tWe-FgDVRr9vI"
+            },
+            "metaSortKey": -1627781391654,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_98ad9b7c5fa14a9b82b3875cee688ced",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627781373729,
+            "created": 1627781373729,
+            "name": "User",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627781373729,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_f5d427a1f90440708708d0f5e3068751",
+            "parentId": "fld_98ad9b7c5fa14a9b82b3875cee688ced",
+            "modified": 1627781377120,
+            "created": 1627699610866,
+            "url": "http://localhost:3000/api/users",
+            "name": "Update",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"user\": {\n\t\t\"username\": \"caaap3\",\n\t\t\"password\": \"senha123\",\n\t\t\"bio\": \"capybara3@mail.com\"\n\t}\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_7f347a3fa20e432f94a20da94febd1b4"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJjYXAxIiwiZW1haWwiOiJjYXB5YmFyYUBtYWlsLmNvbSIsImJpbyI6bnVsbCwiaW1hZ2UiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjEtMDctMjlUMDM6MDU6MzUuMjU5WiIsInVwZGF0ZWRBdCI6IjIwMjEtMDctMjlUMDM6MDU6MzUuMjU5WiIsImlhdCI6MTYyNzY5NjUzOSwiZXhwIjoxNjI3ODY5MzM5fQ.q17JpqMaej-bvz_iZIfR_ZQbW-90MthBT1Xa5xUCcnA"
+            },
+            "metaSortKey": -1627699610866,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b48ff39c94c34a7d817245365f73a783",
+            "parentId": "fld_c3fa54d1759446fd9dcbca948367d729",
+            "modified": 1627867690113,
+            "created": 1627528102779,
+            "url": "http://localhost:3000/api/users/login",
+            "name": "Authentication",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\":\"capybara@mail.com\",\n\t\"password\":\"asdf1234\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_d267f605d15c4651a75bc544029c16a5"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1627528102779,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_c3fa54d1759446fd9dcbca948367d729",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627527796361,
+            "created": 1627527796361,
+            "name": "Auth",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1627527796362,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_ee4a3b0f5bb642a081d48d57878a8e1d",
+            "parentId": "fld_c3fa54d1759446fd9dcbca948367d729",
+            "modified": 1627866190756,
+            "created": 1627527825464,
+            "url": "http://localhost:3000/api/users",
+            "name": "Registration",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"user\": {\n\t\t\"username\": \"cap\",\n\t\t\"password\": \"asdf1234\",\n\t\t\"email\": \"capybara@mail.com\"\n\t}\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b85ea3ae413a4edcaf2d411068becc71"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1627527825465,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_002fa5e702fcdd1642c3f0c77cbb9362c2f64fa9",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627527783668,
+            "created": 1627527783668,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1627527783668,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_002fa5e702fcdd1642c3f0c77cbb9362c2f64fa9",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627527783684,
+            "created": 1627527783684,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_02d92d765b2944daa01ebb6bf703453f",
+            "parentId": "wrk_f959968c549043aca7377aafda4b55a6",
+            "modified": 1627527783181,
+            "created": 1627527783181,
+            "fileName": "rw api",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
