@@ -84,4 +84,33 @@ export class ProfilesService {
       );
     }
   }
+
+  async unfollowUser(username: string, token?: string): Promise<any> {
+    const sequelize = await databaseProviders[0].useFactory();
+
+    try {
+      const payload = await this.jwtService.verifyAsync(token);
+      const result = await sequelize.query(
+        `select id,username, bio, image, false as following from "Users" where username = '${username}'`,
+        { plain: true },
+      );
+      if (result === null) {
+        throw 'profile not found';
+      }
+      await this.profileRepository.destroy({
+        where: { userId: payload.id, profileId: result.id },
+      });
+      delete result.id;
+      return { profile: result };
+    } catch (error) {
+      throw new HttpException(
+        {
+          errors: {
+            body: [error],
+          },
+        },
+        HttpStatus.UNPROCESSABLE_ENTITY,
+      );
+    }
+  }
 }

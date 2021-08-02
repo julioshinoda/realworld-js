@@ -1,4 +1,4 @@
-import { Controller, Param, Headers, Get, Post } from '@nestjs/common';
+import { Controller, Param, Headers, Get, Post, Delete } from '@nestjs/common';
 import { ProfilesService } from './profiles.service';
 
 @Controller('profiles')
@@ -16,6 +16,14 @@ export class ProfilesController {
   @Post(':username/follow')
   async followUser(@Param('username') username: string, @Headers() headers) {
     return await this.profileService.followUser(
+      username,
+      headers.authorization?.replace('Bearer ', ''),
+    );
+  }
+
+  @Delete(':username/follow')
+  async unfollowUser(@Param('username') username: string, @Headers() headers) {
+    return await this.profileService.unfollowUser(
       username,
       headers.authorization?.replace('Bearer ', ''),
     );
